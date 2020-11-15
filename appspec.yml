@@ -1,0 +1,20 @@
+version: 0.0
+os: linux
+files:
+  - source: /geostore
+    destination: /var/www
+#hooks:
+#  BeforeInstall:
+#    - location: Scripts/UnzipResourceBundle.sh
+#    - location: Scripts/UnzipDataBundle.sh
+  AfterInstall:
+    - location: Scripts/install_dependencies
+      timeout: 300
+      runas: root
+  ApplicationStart:
+    - location: Scripts/start_server
+      timeout: 3600
+  ApplicationStop:
+    - location: Scripts/stop_server
+      timeout: 3600
+  
