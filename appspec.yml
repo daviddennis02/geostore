@@ -14,7 +14,9 @@ files:
   ApplicationStart:
     - location: Scripts/start_server
       timeout: 3600
+      runas: root
   ApplicationStop:
     - location: Scripts/stop_server
       timeout: 3600
+      runas: root
   
