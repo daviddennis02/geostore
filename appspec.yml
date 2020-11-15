@@ -3,20 +3,20 @@ os: linux
 files:
   - source: /
     destination: /usr/share/nginx/html
-#hooks:
+hooks:
 #  BeforeInstall:
-#    - location: Scripts/UnzipResourceBundle.sh
-#    - location: Scripts/UnzipDataBundle.sh
+    #- location: 
+    #- location: 
   AfterInstall:
-    - location: Scripts/install_dependencies
+    - location: scripts/install_dependencies
       timeout: 300
       runas: root
   ApplicationStart:
-    - location: Scripts/start_server
+    - location: scripts/start_server
       timeout: 3600
       runas: root
   ApplicationStop:
-    - location: Scripts/stop_server
+    - location: scripts/stop_server
       timeout: 3600
       runas: root
   
