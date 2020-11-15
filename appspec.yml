@@ -1,8 +1,8 @@
 version: 0.0
 os: linux
 files:
-  - source: /geostore
-    destination: /var/www
+  - source: /
+    destination: /usr/share/nginx/html
 #hooks:
 #  BeforeInstall:
 #    - location: Scripts/UnzipResourceBundle.sh
