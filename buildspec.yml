@@ -16,7 +16,6 @@ phases:
       - echo Build completed on `date`
 artifacts:
   files:
-    - geostore/src/web/app/target/geostore.war
+    - target/geostore-1.6-SNAPSHOT.jar
     - appspec.yml
   discard-paths: yes
-
