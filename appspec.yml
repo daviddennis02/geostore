@@ -8,6 +8,7 @@ hooks:
     #- location: 
     #- location: 
 #  AfterInstall:
+#  This is to be handled by configuration management since we are provisioning the nginx webserver
     #- location: scripts/install_dependencies
     #  timeout: 300
     #  runas: root
