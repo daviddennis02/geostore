@@ -12,16 +12,17 @@ phases:
       - echo Build started on `date`
       - mvn clean install
       - echo Launch geostore in a servlet container
-      - cd src/web/app
-      - mvn jetty:run
+      #- mvn jetty:run
   post_build:
     commands:
       - echo Build completed on `date`
       - echo CODEBUILD_SRC_DIR - $CODEBUILD_SRC_DIR
       - ls $CODEBUILD_SRC_DIR
       - ls $CODEBUILD_SRC_DIR/src/web/app
+      - cd src/web/app
+      - mvn jetty:run
+    timeout: 180
 artifacts:
   files:
-    - web/app/**/*
+    - src/web/app/**/*
     - appspec.yml
-  #name: $AWS_REGION-$(date +%Y-%m-%d)
