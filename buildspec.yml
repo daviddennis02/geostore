@@ -21,7 +21,6 @@ phases:
       - ls $CODEBUILD_SRC_DIR/src/web/app
       - cd src/web/app
       - ls src/web/app
-      #- mvn jetty:run
 artifacts:
   files:
     - src/web/app/**/*
