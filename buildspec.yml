@@ -11,16 +11,12 @@ phases:
     commands:
       - echo Build started on `date`
       - mvn clean install
-      - echo Launch geostore in a servlet container
-      #- mvn jetty:run
   post_build:
     commands:
       - echo Build completed on `date`
       - echo CODEBUILD_SRC_DIR - $CODEBUILD_SRC_DIR
       - ls $CODEBUILD_SRC_DIR
       - ls $CODEBUILD_SRC_DIR/src/web/app
-      - cd src/web/app
-      - ls src/web/app
 artifacts:
   files:
     - src/web/app/**/*
