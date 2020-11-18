@@ -1,3 +1,5 @@
 #!/bin/bash
+cd src/web/app
+mvn jetty:run
 sudo service nginx start
 
